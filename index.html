@@ -308,7 +308,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-09-01 14:27:20 / 修改时间：15:25:24" itemprop="dateCreated datePublished" datetime="2021-09-01T14:27:20+08:00">2021-09-01</time>
+              <time title="创建时间：2021-09-01 14:27:20 / 修改时间：16:20:51" itemprop="dateCreated datePublished" datetime="2021-09-01T14:27:20+08:00">2021-09-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -345,26 +345,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="1、安装插件"><a href="#1、安装插件" class="headerlink" title="1、安装插件"></a>1、安装插件</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">npm install hexo<span class="token operator">-</span>generator<span class="token operator">-</span>search <span class="token operator">-</span><span class="token operator">-</span>save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<h3 id="2、更改主题配置文件"><a href="#2、更改主题配置文件" class="headerlink" title="2、更改主题配置文件"></a>2、更改主题配置文件</h3><pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">local_search</span><span class="token punctuation">:</span>
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-  <span class="token comment"># If auto, trigger search by changing input.</span>
-  <span class="token comment"># If manual, trigger search by pressing enter key or search button.</span>
-  <span class="token key atrule">trigger</span><span class="token punctuation">:</span> auto
-  <span class="token comment"># Show top n results per article, show all results by setting to -1</span>
-  <span class="token key atrule">top_n_per_article</span><span class="token punctuation">:</span> <span class="token number">1</span>
-  <span class="token comment"># Unescape html strings to the readable one.</span>
-  <span class="token key atrule">unescape</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
-  <span class="token comment"># Preload the search data when the page loads.</span>
-  <span class="token key atrule">preload</span><span class="token punctuation">:</span> <span class="token boolean important">false</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="3、重新生成即可"><a href="#3、重新生成即可" class="headerlink" title="3、重新生成即可"></a>3、重新生成即可</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">hexo clean
-hexo g
-hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="4、实现效果"><a href="#4、实现效果" class="headerlink" title="4、实现效果"></a>4、实现效果</h3><p><img src="/images/search.png" alt="站内搜索效果"></p>
-
+          <p>给博客添加站内搜索功能，可以根据关键字搜索相关的内容</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/09/01/hexo%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9ANEXT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%AB%99%E5%86%85%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -417,7 +406,7 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-01 12:02:00" itemprop="dateModified" datetime="2021-09-01T12:02:00+08:00">2021-09-01</time>
+                <time title="修改时间：2021-09-01 16:21:22" itemprop="dateModified" datetime="2021-09-01T16:21:22+08:00">2021-09-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -454,20 +443,15 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
+          <p>hello world</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/08/31/hello-world/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -520,7 +504,7 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-01 14:32:53" itemprop="dateModified" datetime="2021-09-01T14:32:53+08:00">2021-09-01</time>
+                <time title="修改时间：2021-09-01 16:22:14" itemprop="dateModified" datetime="2021-09-01T16:22:14+08:00">2021-09-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -557,8 +541,15 @@ hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="FOR-YuanYuan"><a href="#FOR-YuanYuan" class="headerlink" title="FOR YuanYuan"></a>FOR YuanYuan</h1><h2 id="Love-You-Forever-Baby"><a href="#Love-You-Forever-Baby" class="headerlink" title="Love You Forever Baby!!!"></a>Love You Forever Baby!!!</h2><p><img src="/images/baby.jpg" alt="image-baby"></p>
-
+          <p>This is my girl!!!</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/21/For-yuanyuan/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
