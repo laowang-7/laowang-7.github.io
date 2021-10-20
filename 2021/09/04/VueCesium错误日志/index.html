@@ -29,8 +29,9 @@
 <meta property="og:description" content="VueCesium开发过程中遇到的各种错误以及解决方法收集。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/error2.png">
+<meta property="og:image" content="c:/Users/Administrator/AppData/Roaming/Typora/typora-user-images/image-20210913162529635.png">
 <meta property="article:published_time" content="2021-09-04T14:16:52.000Z">
-<meta property="article:modified_time" content="2021-09-09T12:05:42.819Z">
+<meta property="article:modified_time" content="2021-09-24T05:24:54.540Z">
 <meta property="article:author" content="王刘坤">
 <meta property="article:tag" content="VueCesium">
 <meta name="twitter:card" content="summary">
@@ -230,7 +231,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-09-09 20:05:42" itemprop="dateModified" datetime="2021-09-09T20:05:42+08:00">2021-09-09</time>
+                <time title="修改时间：2021-09-24 13:24:54" itemprop="dateModified" datetime="2021-09-24T13:24:54+08:00">2021-09-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -269,7 +270,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>568</span>
+              <span>1.3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -311,7 +312,7 @@
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> router<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="错误2"><a href="#错误2" class="headerlink" title="错误2"></a>错误2</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">types.js:39 Uncaught TypeError: Cannot <span class="token builtin class-name">read</span> property ‘prototype‘ of undefined<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="错误2"><a href="#错误2" class="headerlink" title="错误2"></a>错误2</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">types.js:39 Uncaught TypeError: Cannot read property ‘prototype‘ of undefined<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="/images/error2.png" alt="在这里插入图片描述"></p>
 <blockquote>
@@ -323,10 +324,35 @@
 </blockquote>
 <p>使用 elementui-plus</p>
 <p>卸载之前的element-ui</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">npm</span> uninstall element-ui<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm uninstall element-ui<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>安装element-plus</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> element-plus --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install element-plus --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h2 id="错误3"><a href="#错误3" class="headerlink" title="错误3"></a>错误3</h2><blockquote>
+<p>利用Vuex-undo-redo插件的时候，出现报错，在vue3.x的版本中报错，vue2.x可以运行</p>
+</blockquote>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Uncaught TypeError: Cannot read properties of undefined (reading &#39;find&#39;)
+    at Object.install (plugin.js?e21a:5)
+    at Object.use (runtime-core.esm-bundler.js?5c40:3405)
+    at eval (store.js?c0d6:6)
+    at Module..&#x2F;src&#x2F;store.js (app.js:1149)
+    at __webpack_require__ (app.js:849)
+    at fn (app.js:151)
+    at eval (main.js:12)
+    at Module..&#x2F;src&#x2F;main.js (app.js:1137)
+    at __webpack_require__ (app.js:849)
+    at fn (app.js:151)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210913162529635.png" alt="image-20210913162529635"></p>
+<blockquote>
+<p>暂时还未解决</p>
+</blockquote>
+<h2 id="错误4"><a href="#错误4" class="headerlink" title="错误4"></a>错误4</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"> ERROR  Failed to compile with 1 error                                                                                                下午1:21:59
+
+ error  in .&#x2F;src&#x2F;components&#x2F;MarkerViewer.vue?vue&amp;type&#x3D;style&amp;index&#x3D;0&amp;id&#x3D;31c55d1c&amp;lang&#x3D;scss&amp;scoped&#x3D;true
+
+Syntax Error: TypeError: this.getOptions is not a function<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
     </div>
@@ -416,7 +442,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF1"><span class="nav-number">1.</span> <span class="nav-text">错误1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF2"><span class="nav-number">2.</span> <span class="nav-text">错误2</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF1"><span class="nav-number">1.</span> <span class="nav-text">错误1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF2"><span class="nav-number">2.</span> <span class="nav-text">错误2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF3"><span class="nav-number">3.</span> <span class="nav-text">错误3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF4"><span class="nav-number">4.</span> <span class="nav-text">错误4</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -431,18 +457,18 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">12</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -507,13 +533,13 @@
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">6k</span>
+    <span title="站点总字数">7k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">5 分钟</span>
+    <span title="站点阅读时长">7 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
