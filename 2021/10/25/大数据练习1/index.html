@@ -273,7 +273,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>593</span>
+              <span>498</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -296,10 +296,10 @@
         <h1 id="练习一"><a href="#练习一" class="headerlink" title="练习一"></a>练习一</h1><h2 id="一、使用Spark创建WordCount"><a href="#一、使用Spark创建WordCount" class="headerlink" title="一、使用Spark创建WordCount"></a>一、使用Spark创建WordCount</h2><h3 id="01-创建测试文件"><a href="#01-创建测试文件" class="headerlink" title="01 创建测试文件"></a>01 创建测试文件</h3><blockquote>
 <p>创建WordCount的数据目录，并且切换到WordCount的数据目录</p>
 </blockquote>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 创建WordCount的数据目录
-$ mkdir -p ~&#x2F;workspace&#x2F;WordCount&#x2F;data
-# 切换到data目录
-$ cd ~&#x2F;workspace&#x2F;WordCount&#x2F;data<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment"># 创建WordCount的数据目录</span>
+$ <span class="token function">mkdir</span> -p ~/workspace/WordCount/data
+<span class="token comment"># 切换到data目录</span>
+$ <span class="token builtin class-name">cd</span> ~/workspace/WordCount/data<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211007190418794.png" alt="image-20211007190418794"></p>
 <blockquote>
@@ -315,35 +315,35 @@ $ cd ~&#x2F;workspace&#x2F;WordCount&#x2F;data<span aria-hidden="true" class="li
 <h3 id="02-进入Spark-shell"><a href="#02-进入Spark-shell" class="headerlink" title="02 进入Spark-shell"></a>02 进入Spark-shell</h3><blockquote>
 <p>进入到Spark-shell</p>
 </blockquote>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cd &#x2F;usr&#x2F;local&#x2F;spark
-.&#x2F;bin&#x2F;spark-shell<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token builtin class-name">cd</span> /usr/local/spark
+./bin/spark-shell<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><img src="C:\Users\Administrator\Desktop\笔记文件\image-20211007191316182.png" alt="image-20211007191316182"></p>
 <h3 id="03-执行WordCount-Spark命令"><a href="#03-执行WordCount-Spark命令" class="headerlink" title="03 执行WordCount Spark命令"></a>03 执行WordCount Spark命令</h3><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211007193105691.png" alt="image-20211007193105691"></p>
 <h3 id="04-查看data目录"><a href="#04-查看data目录" class="headerlink" title="04 查看data目录"></a>04 查看data目录</h3><blockquote>
 <p>使用ll查看data目录，可以看到data中有output目录</p>
 </blockquote>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">ls<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">ls</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211007203624242.png" alt="image-20211007203624242"></p>
 <blockquote>
 <p>查看output目录</p>
 </blockquote>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cd output
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token builtin class-name">cd</span> output
 ll<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211007203919926.png" alt="image-20211007203919926"></p>
 <blockquote>
 <p>查看part-00000输出文件</p>
 </blockquote>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">cat part-00000<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">cat</span> part-00000<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211007193710678.png" alt="image-20211007193710678"></p>
 <blockquote>
 <p>可以查看输出目录output中的文件</p>
 </blockquote>
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211007193813283.png" alt="image-20211007193813283"></p>
-<h3 id="05-设置结果输出为一个文件"><a href="#05-设置结果输出为一个文件" class="headerlink" title="05 设置结果输出为一个文件"></a>05 设置结果输出为一个文件</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">countsRDD.repartition(1).saveAsTextFile(&quot;file:&#x2F;home&#x2F;hadoop&#x2F;workspace&#x2F;WordCount&#x2F;data&#x2F;output2&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="05-设置结果输出为一个文件"><a href="#05-设置结果输出为一个文件" class="headerlink" title="05 设置结果输出为一个文件"></a>05 设置结果输出为一个文件</h3><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">countsRDD.repartition<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>.saveAsTextFile<span class="token punctuation">(</span><span class="token string">"file:/home/hadoop/workspace/WordCount/data/output2"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211007202927144.png" alt="image-20211007202927144"></p>
 <blockquote>
