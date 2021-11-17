@@ -285,14 +285,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>6.6k</span>
+              <span>5.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>6 分钟</span>
+              <span>5 分钟</span>
             </span>
             <div class="post-description">练习三</div>
 
@@ -309,73 +309,73 @@
 <p>实验数据集下载</p>
 </blockquote>
 <p>首先新建一个用于运行本案例的目录<code>bigdatacase</code></p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"># 新建目录bigdatacase
-hadoop@maomao-virtual-machine:&#x2F;usr&#x2F;local$ sudo mkdir bigdatacase
-[sudo] password for hadoop: 
-hadoop@maomao-virtual-machine:&#x2F;usr&#x2F;local$ ls
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment"># 新建目录bigdatacase</span>
+hadoop@maomao-virtual-machine:/usr/local$ <span class="token function">sudo</span> <span class="token function">mkdir</span> bigdatacase
+<span class="token punctuation">[</span>sudo<span class="token punctuation">]</span> password <span class="token keyword">for</span> hadoop: 
+hadoop@maomao-virtual-machine:/usr/local$ <span class="token function">ls</span>
 bigdatacase  games   hive     lib                          sbin   spark
-bin          hadoop  idea     man                          scala  src
+bin          hadoop  idea     <span class="token function">man</span>                          scala  src
 etc          hbase   include  mysql-connector-java-8.0.27  share<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211027134415238.png" alt="image-20211027134415238"></p>
 <p>下面给bigdatacase赋予权限</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ sudo chown -R hadoop:hadoop .&#x2F;bigdatacase<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ <span class="token function">sudo</span> <span class="token function">chown</span> -R hadoop:hadoop ./bigdatacase<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>切换到<code>bigdatacase</code>目录，然后新建一个<code>dataset</code></p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ cd bigdatacase
-$ mkdir dataset<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ <span class="token builtin class-name">cd</span> bigdatacase
+$ <span class="token function">mkdir</span> dataset<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>把数据保存到<code>dataset</code>中</p>
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211027142017757.png" alt="image-20211027142017757"></p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ cp huochengyan_data.csv &#x2F;usr&#x2F;local&#x2F;bigdatacase&#x2F;dataset
-$ cd &#x2F;usr&#x2F;local&#x2F;bigdatacase&#x2F;dataset
-$ ls
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ <span class="token function">cp</span> huochengyan_data.csv /usr/local/bigdatacase/dataset
+$ <span class="token builtin class-name">cd</span> /usr/local/bigdatacase/dataset
+$ <span class="token function">ls</span>
 huochengyan_data.csv<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p>数据集预处理</p>
 </blockquote>
 <p>1、删除文件第一行记录（即字段名称）</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ sed -i &#39;1d&#39; huochengyan_data.csv<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ <span class="token function">sed</span> -i <span class="token string">'1d'</span> huochengyan_data.csv<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">sed -i &#39;1d&#39; raw_user.csv
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">sed</span> -i <span class="token string">'1d'</span> raw_user.csv
 
-$ ls
+$ <span class="token function">ls</span>
 huochengyan_data.csv  raw_user.csv  small_user.csv
-$ head -5 raw_user.csv
-10001082,285259775,1,97lk14c,4076,2014-12-08 18
-10001082,4368907,1,,5503,2014-12-12 12
-10001082,4368907,1,,5503,2014-12-12 12
-10001082,53616768,1,,9762,2014-12-02 15
-10001082,151466952,1,,5232,2014-12-12 11
+$ <span class="token function">head</span> -5 raw_user.csv
+<span class="token number">10001082,285259775</span>,1,97lk14c,4076,2014-12-08 <span class="token number">18</span>
+<span class="token number">10001082,4368907</span>,1,,5503,2014-12-12 <span class="token number">12</span>
+<span class="token number">10001082,4368907</span>,1,,5503,2014-12-12 <span class="token number">12</span>
+<span class="token number">10001082,53616768</span>,1,,9762,2014-12-02 <span class="token number">15</span>
+<span class="token number">10001082,151466952</span>,1,,5232,2014-12-12 <span class="token number">11</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>2、对字段进行预处理</p>
 <p>使用vim新建一个<code>pre_deal.sh</code></p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">vim pre_deal.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">vim</span> pre_deal.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">#下面设置输出文件，把用户执行pre_deal.sh命令时提供的第二个参数作为输出文件名称
-outfile&#x3D;$2
-#注意，最后的$infile&gt; $outfile必须跟在&#125;’这两个字符的后面
-awk -F &quot;,&quot; &#39;BEGIN&#123;
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token comment">#下面设置输出文件，把用户执行pre_deal.sh命令时提供的第二个参数作为输出文件名称</span>
+<span class="token assign-left variable">outfile</span><span class="token operator">=</span><span class="token variable">$2</span>
+<span class="token comment">#注意，最后的$infile> $outfile必须跟在&#125;’这两个字符的后面</span>
+<span class="token function">awk</span> -F <span class="token string">","</span> <span class="token string">'BEGIN&#123;
 srand();
-        id&#x3D;0;
-        Province[0]&#x3D;&quot;山东&quot;;Province[1]&#x3D;&quot;山西&quot;;Province[2]&#x3D;&quot;河南&quot;;Province[3]&#x3D;&quot;河北&quot;;Province[4]&#x3D;&quot;陕西&quot;;Province[5]&#x3D;&quot;内蒙古&quot;;Province[6]&#x3D;&quot;上海市&quot;;
-        Province[7]&#x3D;&quot;北京市&quot;;Province[8]&#x3D;&quot;重庆市&quot;;Province[9]&#x3D;&quot;天津市&quot;;Province[10]&#x3D;&quot;福建&quot;;Province[11]&#x3D;&quot;广东&quot;;Province[12]&#x3D;&quot;广西&quot;;Province[13]&#x3D;&quot;云南&quot;; 
-        Province[14]&#x3D;&quot;浙江&quot;;Province[15]&#x3D;&quot;贵州&quot;;Province[16]&#x3D;&quot;新疆&quot;;Province[17]&#x3D;&quot;西藏&quot;;Province[18]&#x3D;&quot;江西&quot;;Province[19]&#x3D;&quot;湖南&quot;;Province[20]&#x3D;&quot;湖北&quot;;
-        Province[21]&#x3D;&quot;黑龙江&quot;;Province[22]&#x3D;&quot;吉林&quot;;Province[23]&#x3D;&quot;辽宁&quot;; Province[24]&#x3D;&quot;江苏&quot;;Province[25]&#x3D;&quot;甘肃&quot;;Province[26]&#x3D;&quot;青海&quot;;Province[27]&#x3D;&quot;四川&quot;;
-        Province[28]&#x3D;&quot;安徽&quot;; Province[29]&#x3D;&quot;宁夏&quot;;Province[30]&#x3D;&quot;海南&quot;;Province[31]&#x3D;&quot;香港&quot;;Province[32]&#x3D;&quot;澳门&quot;;Province[33]&#x3D;&quot;台湾&quot;;
+        id=0;
+        Province[0]="山东";Province[1]="山西";Province[2]="河南";Province[3]="河北";Province[4]="陕西";Province[5]="内蒙古";Province[6]="上海市";
+        Province[7]="北京市";Province[8]="重庆市";Province[9]="天津市";Province[10]="福建";Province[11]="广东";Province[12]="广西";Province[13]="云南"; 
+        Province[14]="浙江";Province[15]="贵州";Province[16]="新疆";Province[17]="西藏";Province[18]="江西";Province[19]="湖南";Province[20]="湖北";
+        Province[21]="黑龙江";Province[22]="吉林";Province[23]="辽宁"; Province[24]="江苏";Province[25]="甘肃";Province[26]="青海";Province[27]="四川";
+        Province[28]="安徽"; Province[29]="宁夏";Province[30]="海南";Province[31]="香港";Province[32]="澳门";Province[33]="台湾";
     &#125;
     &#123;
-        id&#x3D;id+1;
-        value&#x3D;int(rand()*34);       
-        print id&quot;\t&quot;$1&quot;\t&quot;$2&quot;\t&quot;$3&quot;\t&quot;$5&quot;\t&quot;substr($6,1,10)&quot;\t&quot;Province[value]
-    &#125;&#39; $infile&gt; $outfile
+        id=id+1;
+        value=int(rand()*34);       
+        print id"\t"$1"\t"$2"\t"$3"\t"$5"\t"substr($6,1,10)"\t"Province[value]
+    &#125;'</span> <span class="token variable">$infile</span><span class="token operator">></span> <span class="token variable">$outfile</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211027145242045.png" alt="image-20211027145242045"></p>
 <p>执行pre_deal.sh对数据进行预处理</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ bash .&#x2F;pre_deal.sh small_user.csv user_table.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ <span class="token function">bash</span> ./pre_deal.sh small_user.csv user_table.txt<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211027145420371.png" alt="image-20211027145420371"></p>
 <blockquote>
@@ -385,10 +385,10 @@ srand();
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211027145536205.png" alt="image-20211027145536205"></p>
 <p>2、把user_table.txt上传到HDFS中</p>
 <p>在HDFS中新建一个<code>bigdatacase/dataset</code>文件</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ .&#x2F;bin&#x2F;hdfs dfs -mkdir -p &#x2F;bigdatacase&#x2F;dataset<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ ./bin/hdfs dfs -mkdir -p /bigdatacase/dataset<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>然后把linux本地文件系统中的<code>user_table.txt</code>上传到HDFS的<code>bigdatacase/dataset</code>中</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ .&#x2F;bin&#x2F;hdfs dfs -put &#x2F;usr&#x2F;local&#x2F;bigdatacase&#x2F;dataset&#x2F;user_table.txt &#x2F;bigdatacase&#x2F;dataset<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">$ ./bin/hdfs dfs -put /usr/local/bigdatacase/dataset/user_table.txt /bigdatacase/dataset<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>现在可以去查看HDFS中的user_table.txt</p>
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20211027150154755.png" alt="image-20211027150154755"></p>
@@ -407,39 +407,39 @@ srand();
 <blockquote>
 <p>查询数据</p>
 </blockquote>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">show tables;
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">show tables<span class="token punctuation">;</span>
 OK
 bigdata_user
-Time taken: 0.158 seconds, Fetched: 1 row(s)
+Time taken: <span class="token number">0.158</span> seconds, Fetched: <span class="token number">1</span> row<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
 
-# 查询bigdata_user表的各种属性
-hive&gt; show create table bigdata_user;
+<span class="token comment"># 查询bigdata_user表的各种属性</span>
+hive<span class="token operator">></span> show create table bigdata_user<span class="token punctuation">;</span>
 OK
 
-CREATE EXTERNAL TABLE &#96;bigdata_user&#96;(
-  &#96;id&#96; int, 
-  &#96;uid&#96; string, 
-  &#96;item_id&#96; string, 
-  &#96;behavior_type&#96; int, 
-  &#96;item_category&#96; string, 
-  &#96;visit_date&#96; date, 
-  &#96;province&#96; string)
-COMMENT &#39;welcome to xmudblab!&#39;
+CREATE EXTERNAL TABLE <span class="token variable"><span class="token variable">`</span>bigdata_user<span class="token variable">`</span></span><span class="token punctuation">(</span>
+  <span class="token variable"><span class="token variable">`</span><span class="token function">id</span><span class="token variable">`</span></span> int, 
+  <span class="token variable"><span class="token variable">`</span>uid<span class="token variable">`</span></span> string, 
+  <span class="token variable"><span class="token variable">`</span>item_id<span class="token variable">`</span></span> string, 
+  <span class="token variable"><span class="token variable">`</span>behavior_type<span class="token variable">`</span></span> int, 
+  <span class="token variable"><span class="token variable">`</span>item_category<span class="token variable">`</span></span> string, 
+  <span class="token variable"><span class="token variable">`</span>visit_date<span class="token variable">`</span></span> date, 
+  <span class="token variable"><span class="token variable">`</span>province<span class="token variable">`</span></span> string<span class="token punctuation">)</span>
+COMMENT <span class="token string">'welcome to xmudblab!'</span>
 ROW FORMAT SERDE 
-  &#39;org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe&#39; 
-WITH SERDEPROPERTIES ( 
-  &#39;field.delim&#39;&#x3D;&#39;\t&#39;, 
-  &#39;serialization.format&#39;&#x3D;&#39;\t&#39;) 
+  <span class="token string">'org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe'</span> 
+WITH SERDEPROPERTIES <span class="token punctuation">(</span> 
+  <span class="token string">'field.delim'</span><span class="token operator">=</span><span class="token string">'\t'</span>, 
+  <span class="token string">'serialization.format'</span><span class="token operator">=</span><span class="token string">'\t'</span><span class="token punctuation">)</span> 
 STORED AS INPUTFORMAT 
-  &#39;org.apache.hadoop.mapred.TextInputFormat&#39; 
+  <span class="token string">'org.apache.hadoop.mapred.TextInputFormat'</span> 
 OUTPUTFORMAT 
-  &#39;org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat&#39;
+  <span class="token string">'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'</span>
 LOCATION
-  &#39;hdfs:&#x2F;&#x2F;192.168.222.129:9000&#x2F;bigdatacase&#x2F;dataset&#39;
-TBLPROPERTIES (
-  &#39;bucketing_version&#39;&#x3D;&#39;2&#39;, 
-  &#39;transient_lastDdlTime&#39;&#x3D;&#39;1635318615&#39;)
-Time taken: 0.898 seconds, Fetched: 23 row(s)
+  <span class="token string">'hdfs://192.168.222.129:9000/bigdatacase/dataset'</span>
+TBLPROPERTIES <span class="token punctuation">(</span>
+  <span class="token string">'bucketing_version'</span><span class="token operator">=</span><span class="token string">'2'</span>, 
+  <span class="token string">'transient_lastDdlTime'</span><span class="token operator">=</span><span class="token string">'1635318615'</span><span class="token punctuation">)</span>
+Time taken: <span class="token number">0.898</span> seconds, Fetched: <span class="token number">23</span> row<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>还可以通过以下命令查看表的简单结构</p>
@@ -624,7 +624,10 @@ Time taken: 0.142 seconds, Fetched: 34 row(s)<span aria-hidden="true" class="lin
     <a href="/2021/10/25/%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%BB%83%E4%B9%A01/" rel="prev" title="大数据练习1">
       <i class="fa fa-chevron-left"></i> 大数据练习1
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2021/11/17/Goland%E9%85%8D%E7%BD%AEGOROOT%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB%E5%B7%B2%E5%AE%89%E8%A3%85%E7%9A%84go/" rel="next" title="Goland配置GOROOT无法识别已安装的go">
+      Goland配置GOROOT无法识别已安装的go <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -702,18 +705,18 @@ Time taken: 0.142 seconds, Fetched: 34 row(s)<span aria-hidden="true" class="lin
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -784,7 +787,7 @@ Time taken: 0.142 seconds, Fetched: 34 row(s)<span aria-hidden="true" class="lin
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">19 分钟</span>
+    <span title="站点阅读时长">18 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
