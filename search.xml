@@ -4,11 +4,38 @@
   
     
     <entry>
+      <title>六级真题作文</title>
+      <link href="/2021/12/06/%E5%85%AD%E7%BA%A7%E7%9C%9F%E9%A2%98%E4%BD%9C%E6%96%87/"/>
+      <url>/2021/12/06/%E5%85%AD%E7%BA%A7%E7%9C%9F%E9%A2%98%E4%BD%9C%E6%96%87/</url>
+      
+        <content type="html"><![CDATA[<h2 id="2018年12月（1）"><a href="#2018年12月（1）" class="headerlink" title="2018年12月（1）"></a>2018年12月（1）</h2><blockquote><p>原文</p></blockquote><p>​         近年来，中国<code>越来越多的博物馆</code>免费向公众开放。博物管展览次数和参观人数都明显增加。<code>在一些广受欢迎的博物馆门前</code>，排长队已很常见。这些博物馆必须采取措施限制参观人数。如今，展览形式越来越多样。一些大型博物馆利用<code>多媒体和虚拟现实</code>等先进技术，使展览更具吸引力。<code>不少</code>博物馆还举办在线展览，人们可在网络上关上珍惜展品。然而，现场观看展品的体验对大多数参观者还是更具吸引力。</p><blockquote><p>译文</p></blockquote><p>​     In recent years, <code>a growing number of</code> museums in China have been open to the public, free of charge. Both the number of museum exhibitions and the number of museum visitors have increased sig-nificantly. It is quite common to see long queues <code>in front of some popular museums</code>. These mu-seums have to take measures to limit the number of visitors. Nowdays, museum exhibitions come in an increasing variety of forms. Some large museums use advanced technologies like <code>multimedia and virtual reality</code> to make the exhibitions more attractive. <code>Quite a few museums</code> also hold online exhibitions, making rare exhibits available online for public viewing. However, the experience of viewing physical exhibits in persion is still more attractive to most visitors.</p><h2 id="2018年12月（2）"><a href="#2018年12月（2）" class="headerlink" title="2018年12月（2）"></a>2018年12月（2）</h2><blockquote><p>原文</p></blockquote><blockquote><p>译文</p></blockquote><p>​        China is attaching increasing importance to public libraries and encouraging people to make full use of them. <code>Newly released statistics show that</code> the number of public libraries in China is growing <code>year by year</code>. Many libraries have created a quieter and more comfortable environment for readers through <code>renovation and expansion</code>. Large public libraries not only provide <code>a wide variety of reference resources</code>, but also <code>hold regular lectures, exhibitions and other activities=</code> In recent years, many digital libraries have also been created, thus saving the space needed to store books. Some libraries have also <code>introduced self-service  systems</code>, which make it more convenient for readers to borrow and return books, further satisfying the need of readers.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 六级 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 作文 </tag>
+            
+            <tag> 六级 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Goland配置GOROOT无法识别已安装的go</title>
       <link href="/2021/11/17/Goland%E9%85%8D%E7%BD%AEGOROOT%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB%E5%B7%B2%E5%AE%89%E8%A3%85%E7%9A%84go/"/>
       <url>/2021/11/17/Goland%E9%85%8D%E7%BD%AEGOROOT%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB%E5%B7%B2%E5%AE%89%E8%A3%85%E7%9A%84go/</url>
       
-        <content type="html"><![CDATA[<h2 id="1、本次安装"><a href="#1、本次安装" class="headerlink" title="1、本次安装"></a>1、本次安装</h2><p>goland：2019.2.3</p><p>go：1.17.3</p><p>==本次安装的已经安装好go并配置好GOROOT和GOPATH之后，在Goland无法自动识别出GOROOT。在Goland设置选择go安装目录下，提示以下信息：==</p><p><code>The selected directory is not a valid home for Go SDK</code></p><h2 id="2、解决"><a href="#2、解决" class="headerlink" title="2、解决"></a>2、解决</h2><p>因为Goland版本和go版本不对应，需要将go版本降低到1.15.15。调整之后，Goland会自动识别出本地安装的GOROOT的路径。</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="1、本次安装"><a href="#1、本次安装" class="headerlink" title="1、本次安装"></a>1、本次安装</h2><p><code>goland：2019.2.3</code></p><p><code>go：1.17.3</code></p><p>本次安装的已经安装好go并配置好GOROOT和GOPATH之后，在Goland无法自动识别出GOROOT。在Goland设置选择go安装目录下，提示以下信息：</p><p><code>The selected directory is not a valid home for Go SDK</code></p><h2 id="2、解决"><a href="#2、解决" class="headerlink" title="2、解决"></a>2、解决</h2><p>因为Goland版本和go版本不对应，需要将go版本降低到1.15.15。调整之后，Goland会自动识别出本地安装的GOROOT的路径。</p>]]></content>
       
       
       <categories>
