@@ -270,7 +270,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
+              <span>1.2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -312,7 +312,7 @@
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> router<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="错误2"><a href="#错误2" class="headerlink" title="错误2"></a>错误2</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">types.js:39 Uncaught TypeError: Cannot read property ‘prototype‘ of undefined<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="错误2"><a href="#错误2" class="headerlink" title="错误2"></a>错误2</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">types.js:39 Uncaught TypeError: Cannot <span class="token builtin class-name">read</span> property ‘prototype‘ of undefined<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p><img src="/images/error2.png" alt="在这里插入图片描述"></p>
 <blockquote>
@@ -324,35 +324,35 @@
 </blockquote>
 <p>使用 elementui-plus</p>
 <p>卸载之前的element-ui</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm uninstall element-ui<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">npm</span> uninstall element-ui<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>安装element-plus</p>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">npm install element-plus --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"><span class="token function">npm</span> <span class="token function">install</span> element-plus --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="错误3"><a href="#错误3" class="headerlink" title="错误3"></a>错误3</h2><blockquote>
 <p>利用Vuex-undo-redo插件的时候，出现报错，在vue3.x的版本中报错，vue2.x可以运行</p>
 </blockquote>
-<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Uncaught TypeError: Cannot read properties of undefined (reading &#39;find&#39;)
-    at Object.install (plugin.js?e21a:5)
-    at Object.use (runtime-core.esm-bundler.js?5c40:3405)
-    at eval (store.js?c0d6:6)
-    at Module..&#x2F;src&#x2F;store.js (app.js:1149)
-    at __webpack_require__ (app.js:849)
-    at fn (app.js:151)
-    at eval (main.js:12)
-    at Module..&#x2F;src&#x2F;main.js (app.js:1137)
-    at __webpack_require__ (app.js:849)
-    at fn (app.js:151)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-shell" data-language="shell"><code class="language-shell">Uncaught TypeError: Cannot <span class="token builtin class-name">read</span> properties of undefined <span class="token punctuation">(</span>reading <span class="token string">'find'</span><span class="token punctuation">)</span>
+    at Object.install <span class="token punctuation">(</span>plugin.js?e21a:5<span class="token punctuation">)</span>
+    at Object.use <span class="token punctuation">(</span>runtime-core.esm-bundler.js?5c40:3405<span class="token punctuation">)</span>
+    at <span class="token builtin class-name">eval</span> <span class="token punctuation">(</span>store.js?c0d6:6<span class="token punctuation">)</span>
+    at Module<span class="token punctuation">..</span>/src/store.js <span class="token punctuation">(</span>app.js:1149<span class="token punctuation">)</span>
+    at __webpack_require__ <span class="token punctuation">(</span>app.js:849<span class="token punctuation">)</span>
+    at fn <span class="token punctuation">(</span>app.js:151<span class="token punctuation">)</span>
+    at <span class="token builtin class-name">eval</span> <span class="token punctuation">(</span>main.js:12<span class="token punctuation">)</span>
+    at Module<span class="token punctuation">..</span>/src/main.js <span class="token punctuation">(</span>app.js:1137<span class="token punctuation">)</span>
+    at __webpack_require__ <span class="token punctuation">(</span>app.js:849<span class="token punctuation">)</span>
+    at fn <span class="token punctuation">(</span>app.js:151<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210913162529635.png" alt="image-20210913162529635"></p>
 <blockquote>
 <p>暂时还未解决</p>
 </blockquote>
-<h2 id="错误4"><a href="#错误4" class="headerlink" title="错误4"></a>错误4</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"> ERROR  Failed to compile with 1 error                                                                                                下午1:21:59
+<h2 id="错误4"><a href="#错误4" class="headerlink" title="错误4"></a>错误4</h2><pre class="line-numbers language-shell" data-language="shell"><code class="language-shell"> ERROR  Failed to compile with <span class="token number">1</span> error                                                                                                下午1:21:59
 
- error  in .&#x2F;src&#x2F;components&#x2F;MarkerViewer.vue?vue&amp;type&#x3D;style&amp;index&#x3D;0&amp;id&#x3D;31c55d1c&amp;lang&#x3D;scss&amp;scoped&#x3D;true
+ error  <span class="token keyword">in</span> ./src/components/MarkerViewer.vue?vue<span class="token operator">&amp;</span><span class="token assign-left variable">type</span><span class="token operator">=</span>style<span class="token operator">&amp;</span><span class="token assign-left variable">index</span><span class="token operator">=</span><span class="token number">0</span><span class="token operator">&amp;</span><span class="token assign-left variable">id</span><span class="token operator">=</span>31c55d1c<span class="token operator">&amp;</span><span class="token assign-left variable">lang</span><span class="token operator">=</span>scss<span class="token operator">&amp;</span><span class="token assign-left variable">scoped</span><span class="token operator">=</span>true
 
-Syntax Error: TypeError: this.getOptions is not a function<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+Syntax Error: TypeError: this.getOptions is not a <span class="token keyword">function</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
     </div>
@@ -457,7 +457,7 @@ Syntax Error: TypeError: this.getOptions is not a function<span aria-hidden="tru
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -533,13 +533,13 @@ Syntax Error: TypeError: this.getOptions is not a function<span aria-hidden="tru
       <i class="fa fa-chart-area"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">27k</span>
+    <span title="站点总字数">29k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">24 分钟</span>
+    <span title="站点阅读时长">26 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
@@ -547,7 +547,7 @@ Syntax Error: TypeError: this.getOptions is not a function<span aria-hidden="tru
 
     <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-
+<script type="text/javascript" src="/js/click-live.js" />
 <script>
     var now = new Date();
     function createtime() {
